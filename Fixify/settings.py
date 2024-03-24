@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qjx85&h9ls8-e6eg(xf6h=s#^7)(*5o(8^r-t5y#wix*gj&*2(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['leapcell.io']
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
