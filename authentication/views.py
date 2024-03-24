@@ -8,7 +8,9 @@ from django.db.models import Q
 from blog.models import BlogPost  # Import the BlogPost mode
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth import logout
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -27,7 +29,6 @@ def login_view(request):
     
     return render(request, 'login.html')
 
-
 def landing_page(request):
     # Fetch the last three blog posts
     last_three_posts = BlogPost.objects.order_by('-timestamp')[:3]
@@ -35,6 +36,7 @@ def landing_page(request):
     # Pass the last three blog posts to the template context
     return render(request, 'home.html', {'last_three_posts': last_three_posts})
 
+@csrf_exempt
 def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
