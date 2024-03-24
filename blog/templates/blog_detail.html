@@ -886,7 +886,7 @@
           </div>
           <nav class="header-navigation">
             {% if user.is_authenticated %}
-            <a href="{% url 'home'%}">Acasă</a>
+            <a href="{% url 'landing_page'%}">Acasă</a>
               <a href="{% url 'profile' %}">Profile</a>
               <a href="{% url 'blog_list' %}">Blog</a>
               <div class="dropdown">
@@ -897,7 +897,7 @@
                 </div>
               </div>
             {% else %}
-            <a href="{% url 'home'%}">Acasă</a>
+            <a href="{% url 'landing_page'%}">Acasă</a>
               <a href="{% url 'register' %}">Înregistrează-te</a>
               <a href="{% url 'login' %}">Login</a>
               <a href="{% url 'blog_list' %}">Blog</a>
