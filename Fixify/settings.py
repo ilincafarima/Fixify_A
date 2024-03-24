@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-qjx85&h9ls8-e6eg(xf6h=s#^7)(*5o(8^r-t5y#wix*gj&*2(
 DEBUG = True
 
 ALLOWED_HOSTS = ['leapcell.io']
-
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Application definition
@@ -130,4 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 STATICFILES_DIRS = [
     "./staticfiles/admin",
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://ilincafarima-fixify-ffljjlqy.leapcell.dev',
 ]
