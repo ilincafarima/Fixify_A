@@ -11,4 +11,5 @@ pytz==2022.1
 PyYAML==5.4.1
 sqlparse==0.4.4
 typing-extensions==4.9.0
+Cython==0.29.24
 
